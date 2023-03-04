@@ -2,7 +2,7 @@
 #include <cstddef>
 
 //T is the value type
-//change and range sum in O(n^2)
+//change , range sum operation, in O(logn)
 //range in [1,size]
 class BIT
 {
