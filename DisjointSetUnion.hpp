@@ -1,7 +1,7 @@
 #pragma once
 #include <unordered_map>
 
-class Combination
+class DSU
 {
 private:
     struct Node

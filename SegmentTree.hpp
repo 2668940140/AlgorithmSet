@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <vector>
 #include <cstddef>
 #include <cmath>
@@ -87,40 +86,3 @@ public:
         update(0,LEN-1,l,r,1,val);
     }
 };
-
-using namespace std;
-#define ll long long
-#define MAXN 100005
-/*
-5 5
-1 5 4 2 3
-2 2 4
-1 2 3 2
-2 3 4
-1 1 5 1
-2 1 4
-*/
-ll ar[MAXN];
-int main()
-{
-    int n,opN;
-    scanf("%d%d",&n,&opN);
-    for (int i=0;i<n;i++)
-        scanf("%lld",ar+i);
-    STree<ll> stree(ar,ar+n);
-    for (int i=0;i<opN;i++)
-    {
-        int op,l,r;ll val;
-        scanf("%d%d%d",&op,&l,&r);
-        if (op==1)
-        {
-            scanf("%lld", &val);
-            stree.modify(l-1,r-1,val);
-        }
-        else
-        {
-            printf("%lld\n",stree.ask(l-1,r-1));
-        }
-    }
-    return 0;
-}
